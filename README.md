@@ -1,9 +1,9 @@
 # llm-glm
 
-[![PyPI](https://img.shields.io/pypi/v/llm-glm.svg)](https://pypi.org/project/llm-zai-glm/)
-[![Changelog](https://img.shields.io/github/v/release/simonw/llm-glm?include_prereleases&label=changelog)](https://github.com/simonw/llm-zai-glm/releases)
-[![Tests](https://github.com/simonw/llm-zai-glm/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-zai-glm/actions/workflows/test.yml)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-zai-glm/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/llm-glm.svg)](https://pypi.org/project/llm-glm/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/llm-glm?include_prereleases&label=changelog)](https://github.com/simonw/llm-glm/releases)
+[![Tests](https://github.com/simonw/llm-glm/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-glm/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-glm/blob/main/LICENSE)
 
 Access models via the Z.ai API
 

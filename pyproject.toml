@@ -1,0 +1,31 @@
+[project]
+name = "llm-z-ai"
+version = "0.1"
+description = "Access models via the Z.ai API"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.11"
+dependencies = [
+    "llm"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = true
+
+[project.urls]
+Homepage = "https://github.com/simonw/llm-z-ai"
+Changelog = "https://github.com/simonw/llm-z-ai/releases"
+Issues = "https://github.com/simonw/llm-z-ai/issues"
+CI = "https://github.com/simonw/llm-z-ai/actions"
+
+[project.entry-points.llm]
+z_ai = "llm_z_ai"
+
+[dependency-groups]
+dev = ["pytest"]

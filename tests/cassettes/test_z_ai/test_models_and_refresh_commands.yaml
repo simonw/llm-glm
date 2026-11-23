@@ -1,0 +1,220 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/paas/v4/models
+  response:
+    body:
+      string: '{"object":"list","data":[{"id":"glm-4.5","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.5-air","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.6","object":"model","created":1759276800,"owned_by":"z-ai"},{"id":"glm-4.7","object":"model","created":1766332800,"owned_by":"z-ai"},{"id":"glm-5","object":"model","created":1770739200,"owned_by":"z-ai"},{"id":"glm-5-turbo","object":"model","created":1773504000,"owned_by":"z-ai"},{"id":"glm-5.1","object":"model","created":1774620000,"owned_by":"z-ai"},{"id":"glm-5.2","object":"model","created":1781625600,"owned_by":"z-ai"},{"id":"glm-5.3","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flash","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx-legal","object":"model","created":1793620800,"owned_by":"z-ai"},{"id":"glm-5.4","object":"model","created":1795406400,"owned_by":"z-ai"}]}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '1007'
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Mon, 23 Nov 2026 17:33:51 GMT
+      ga-traceid:
+      - 868729646141d0124c7f2215fb8d8d8a
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 202611240133517c8728a882ad4ea1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/v1/models
+  response:
+    body:
+      string: '{"models":[{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Flagship
+        model for advanced coding and agents","display_name":"glm-5.4","effective_context_window_percent":50,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":0,"shell_type":"shell_command","slug":"glm-5.4","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Powerful
+        model for complex coding and long-horizon agents","display_name":"glm-5.3","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":1048576,"priority":1,"shell_type":"shell_command","slug":"glm-5.3","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Fast
+        and efficient model for coding and multimodal tasks","display_name":"glm-5.3-flash","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":2,"shell_type":"shell_command","slug":"glm-5.3-flash","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":204800,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Agent-optimized
+        model","display_name":"glm-5-turbo","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":204800,"priority":3,"shell_type":"shell_command","slug":"glm-5-turbo","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"}]}'
+    headers:
+      access-control-allow-headers:
+      - '*'
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '3100'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 23 Nov 2026 17:33:52 GMT
+      ga-traceid:
+      - 432c990c1bd09b9358162400c783c73f
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 2026112401335243d5aa48634c4500
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/paas/v4/models
+  response:
+    body:
+      string: '{"object":"list","data":[{"id":"glm-4.5","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.5-air","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.6","object":"model","created":1759276800,"owned_by":"z-ai"},{"id":"glm-4.7","object":"model","created":1766332800,"owned_by":"z-ai"},{"id":"glm-5","object":"model","created":1770739200,"owned_by":"z-ai"},{"id":"glm-5-turbo","object":"model","created":1773504000,"owned_by":"z-ai"},{"id":"glm-5.1","object":"model","created":1774620000,"owned_by":"z-ai"},{"id":"glm-5.2","object":"model","created":1781625600,"owned_by":"z-ai"},{"id":"glm-5.3","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flash","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx-legal","object":"model","created":1793620800,"owned_by":"z-ai"},{"id":"glm-5.4","object":"model","created":1795406400,"owned_by":"z-ai"}]}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '1007'
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Mon, 23 Nov 2026 17:33:52 GMT
+      ga-traceid:
+      - bd260b2e337420161ff149e224e6ccd4
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 20261124013352d91153a2b72c4a04
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/v1/models
+  response:
+    body:
+      string: '{"models":[{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Flagship
+        model for advanced coding and agents","display_name":"glm-5.4","effective_context_window_percent":50,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":0,"shell_type":"shell_command","slug":"glm-5.4","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Powerful
+        model for complex coding and long-horizon agents","display_name":"glm-5.3","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":1048576,"priority":1,"shell_type":"shell_command","slug":"glm-5.3","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Fast
+        and efficient model for coding and multimodal tasks","display_name":"glm-5.3-flash","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":2,"shell_type":"shell_command","slug":"glm-5.3-flash","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":204800,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Agent-optimized
+        model","display_name":"glm-5-turbo","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":204800,"priority":3,"shell_type":"shell_command","slug":"glm-5-turbo","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"}]}'
+    headers:
+      access-control-allow-headers:
+      - '*'
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '3100'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 23 Nov 2026 17:33:52 GMT
+      ga-traceid:
+      - e54f1aff55f03c7dcf4aaa7411c13b73
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 2026112401335229f633e4d4534ab3
+    status:
+      code: 200
+      message: OK
+version: 1

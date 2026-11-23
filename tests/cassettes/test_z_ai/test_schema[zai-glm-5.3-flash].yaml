@@ -1,0 +1,247 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/paas/v4/models
+  response:
+    body:
+      string: '{"object":"list","data":[{"id":"glm-4.5","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.5-air","object":"model","created":1753632000,"owned_by":"z-ai"},{"id":"glm-4.6","object":"model","created":1759276800,"owned_by":"z-ai"},{"id":"glm-4.7","object":"model","created":1766332800,"owned_by":"z-ai"},{"id":"glm-5","object":"model","created":1770739200,"owned_by":"z-ai"},{"id":"glm-5-turbo","object":"model","created":1773504000,"owned_by":"z-ai"},{"id":"glm-5.1","object":"model","created":1774620000,"owned_by":"z-ai"},{"id":"glm-5.2","object":"model","created":1781625600,"owned_by":"z-ai"},{"id":"glm-5.3","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flash","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx","object":"model","created":1786636800,"owned_by":"z-ai"},{"id":"glm-5.3-flashx-legal","object":"model","created":1793620800,"owned_by":"z-ai"},{"id":"glm-5.4","object":"model","created":1795406400,"owned_by":"z-ai"}]}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '1007'
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Mon, 23 Nov 2026 18:18:08 GMT
+      ga-traceid:
+      - 59cdf8282396c2559bcf53d7a9c06218
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 20261124021808d6f0a728dfff42b0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      host:
+      - api.z.ai
+      user-agent:
+      - python-httpx2/2.16.2
+    method: GET
+    uri: https://api.z.ai/api/v1/models
+  response:
+    body:
+      string: '{"models":[{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Flagship
+        model for advanced coding and agents","display_name":"glm-5.4","effective_context_window_percent":50,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":0,"shell_type":"shell_command","slug":"glm-5.4","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Powerful
+        model for complex coding and long-horizon agents","display_name":"glm-5.3","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":1048576,"priority":1,"shell_type":"shell_command","slug":"glm-5.3","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":1048576,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Fast
+        and efficient model for coding and multimodal tasks","display_name":"glm-5.3-flash","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text","image"],"max_context_window":1048576,"priority":2,"shell_type":"shell_command","slug":"glm-5.3-flash","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[{"description":"Light
+        reasoning","effort":"low"},{"description":"Enhanced reasoning","effort":"high"},{"description":"Deep
+        reasoning","effort":"max"}],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"},{"apply_patch_tool_type":"freeform","base_instructions":"","context_window":204800,"default_reasoning_level":"max","default_reasoning_summary":"none","description":"Agent-optimized
+        model","display_name":"glm-5-turbo","effective_context_window_percent":95,"experimental_supported_tools":[],"input_modalities":["text"],"max_context_window":204800,"priority":3,"shell_type":"shell_command","slug":"glm-5-turbo","support_verbosity":false,"supported_in_api":true,"supported_reasoning_levels":[],"supports_parallel_tool_calls":true,"supports_reasoning_summaries":true,"truncation_policy":{"limit":10000,"mode":"bytes"},"visibility":"list"}]}'
+    headers:
+      access-control-allow-headers:
+      - '*'
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=3600
+      connection:
+      - keep-alive
+      content-length:
+      - '3100'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 23 Nov 2026 18:18:08 GMT
+      ga-traceid:
+      - 5eec57524dabba7029076829c01d6b8a
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 2026112402180888869a2a61d84d9f
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"model":"glm-5.3-flash","stream":true,"include":["reasoning.encrypted_content"],"input":[{"role":"user","content":"Invent
+      a dog"}],"reasoning":{"effort":"low"},"store":false,"text":{"format":{"type":"json_schema","name":"output","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"]},"strict":false}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      content-length:
+      - '365'
+      content-type:
+      - application/json
+      host:
+      - api.z.ai
+      user-agent:
+      - OpenAI/Python 3.57.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.57.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.15.0
+    method: POST
+    uri: https://api.z.ai/api/v1/responses
+  response:
+    body:
+      string: "event: response.created\ndata: {\"response\":{\"created_at\":1795457888,\"id\":\"resp_202611240218082139bee3203e4c9d\",\"model\":\"glm-5.3-flash\",\"object\":\"response\",\"output\":[],\"status\":\"in_progress\"},\"sequence_number\":0,\"type\":\"response.created\"}\n\nevent:
+        response.in_progress\ndata: {\"response\":{\"created_at\":1795457888,\"id\":\"resp_202611240218082139bee3203e4c9d\",\"model\":\"glm-5.3-flash\",\"object\":\"response\",\"output\":[],\"status\":\"in_progress\"},\"sequence_number\":1,\"type\":\"response.in_progress\"}\n\nevent:
+        response.output_item.added\ndata: {\"item\":{\"content\":[],\"id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"status\":\"in_progress\",\"summary\":[],\"type\":\"reasoning\"},\"output_index\":0,\"sequence_number\":2,\"type\":\"response.output_item.added\"}\n\nevent:
+        response.content_part.added\ndata: {\"content_index\":0,\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"part\":{\"text\":\"\",\"type\":\"reasoning_text\"},\"sequence_number\":3,\"type\":\"response.content_part.added\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\"User\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":4,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" asks\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":5,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" to\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":6,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" invent\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":7,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" a\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":8,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" dog\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":9,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" \u2014\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":10,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" creative\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":11,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" task\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":12,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\".\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":13,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" Invent\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":14,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" a\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":15,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" fictional\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":16,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\" breed\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":17,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.delta\ndata: {\"content_index\":0,\"delta\":\".\",\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":18,\"type\":\"response.reasoning_text.delta\"}\n\nevent:
+        response.reasoning_text.done\ndata: {\"content_index\":0,\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"sequence_number\":19,\"text\":\"User
+        asks to invent a dog \u2014 creative task. Invent a fictional breed.\",\"type\":\"response.reasoning_text.done\"}\n\nevent:
+        response.content_part.done\ndata: {\"content_index\":0,\"item_id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"output_index\":0,\"part\":{\"text\":\"User
+        asks to invent a dog \u2014 creative task. Invent a fictional breed.\",\"type\":\"reasoning_text\"},\"sequence_number\":20,\"type\":\"response.content_part.done\"}\n\nevent:
+        response.output_item.done\ndata: {\"item\":{\"content\":[{\"text\":\"User
+        asks to invent a dog \u2014 creative task. Invent a fictional breed.\",\"type\":\"reasoning_text\"}],\"encrypted_content\":null,\"id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"status\":\"completed\",\"summary\":[],\"type\":\"reasoning\"},\"output_index\":0,\"sequence_number\":21,\"type\":\"response.output_item.done\"}\n\nevent:
+        response.output_item.added\ndata: {\"item\":{\"content\":[],\"id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"role\":\"assistant\",\"status\":\"in_progress\",\"type\":\"message\"},\"output_index\":1,\"sequence_number\":22,\"type\":\"response.output_item.added\"}\n\nevent:
+        response.content_part.added\ndata: {\"content_index\":0,\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"output_index\":1,\"part\":{\"annotations\":[],\"text\":\"\",\"type\":\"output_text\"},\"sequence_number\":23,\"type\":\"response.content_part.added\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"{\\\"\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":24,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"a\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":25,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"ge\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":26,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"\\\":\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":27,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"7\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":28,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\",\\\"\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":29,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"name\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":30,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"\\\":\\\"\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":31,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"N\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":32,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"imbus\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":33,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\" D\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":34,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"oodle\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":35,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"fl\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":36,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"uff\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":37,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\" (\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":38,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"G\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":39,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"lim\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":40,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"mer\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":41,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"p\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":42,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"aw\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":43,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\" Ret\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":44,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"ri\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":45,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\"ever\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":46,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\")\\\"\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":47,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.delta\ndata: {\"content_index\":0,\"delta\":\" }\",\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"logprobs\":[],\"output_index\":1,\"sequence_number\":48,\"type\":\"response.output_text.delta\"}\n\nevent:
+        response.output_text.done\ndata: {\"content_index\":0,\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"output_index\":1,\"sequence_number\":49,\"text\":\"{\\\"age\\\":7,\\\"name\\\":\\\"Nimbus
+        Doodlefluff (Glimmerpaw Retriever)\\\" }\",\"type\":\"response.output_text.done\"}\n\nevent:
+        response.content_part.done\ndata: {\"content_index\":0,\"item_id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"output_index\":1,\"part\":{\"annotations\":[],\"text\":\"{\\\"age\\\":7,\\\"name\\\":\\\"Nimbus
+        Doodlefluff (Glimmerpaw Retriever)\\\" }\",\"type\":\"output_text\"},\"sequence_number\":50,\"type\":\"response.content_part.done\"}\n\nevent:
+        response.output_item.done\ndata: {\"item\":{\"content\":[{\"annotations\":[],\"text\":\"{\\\"age\\\":7,\\\"name\\\":\\\"Nimbus
+        Doodlefluff (Glimmerpaw Retriever)\\\" }\",\"type\":\"output_text\"}],\"id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"role\":\"assistant\",\"status\":\"completed\",\"type\":\"message\"},\"output_index\":1,\"sequence_number\":51,\"type\":\"response.output_item.done\"}\n\nevent:
+        response.completed\ndata: {\"response\":{\"conversation_id\":\"\",\"created_at\":1795457888,\"error\":null,\"id\":\"resp_202611240218082139bee3203e4c9d\",\"incomplete_details\":null,\"instructions\":\"\",\"metadata\":null,\"model\":\"glm-5.3-flash\",\"object\":\"response\",\"output\":[{\"content\":[{\"text\":\"User
+        asks to invent a dog \u2014 creative task. Invent a fictional breed.\",\"type\":\"reasoning_text\"}],\"encrypted_content\":null,\"id\":\"rs_resp_202611240218082139bee3203e4c9d\",\"status\":\"completed\",\"summary\":[],\"type\":\"reasoning\"},{\"content\":[{\"annotations\":[],\"text\":\"{\\\"age\\\":7,\\\"name\\\":\\\"Nimbus
+        Doodlefluff (Glimmerpaw Retriever)\\\" }\",\"type\":\"output_text\"}],\"id\":\"msg_resp_202611240218082139bee3203e4c9d\",\"role\":\"assistant\",\"status\":\"completed\",\"type\":\"message\"}],\"parallel_tool_calls\":true,\"previous_response_id\":\"\",\"status\":\"completed\",\"usage\":{\"input_tokens\":16,\"input_tokens_details\":{\"cached_tokens\":0},\"output_tokens\":42,\"output_tokens_details\":{\"reasoning_tokens\":15},\"total_tokens\":58}},\"sequence_number\":52,\"type\":\"response.completed\"}\n\n"
+    headers:
+      access-control-allow-headers:
+      - '*'
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=3600
+      cache-control:
+      - no-cache
+      connection:
+      - keep-alive
+      content-type:
+      - text/event-stream
+      date:
+      - Mon, 23 Nov 2026 18:18:09 GMT
+      ga-traceid:
+      - 2c0e682557d045f510fd76a0735d4fda
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-log-id:
+      - 202611240218082139bee3203e4c9d
+      - 202611240218082139bee3203e4c9d
+      x-request-id:
+      - resp_202611240218082139bee3203e4c9d
+    status:
+      code: 200
+      message: OK
+version: 1

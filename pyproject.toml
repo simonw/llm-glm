@@ -1,5 +1,5 @@
 [project]
-name = "llm-z-ai"
+name = "llm-glm"
 version = "0.1"
 description = "Access models via the Z.ai API"
 readme = "README.md"
@@ -20,13 +20,13 @@ build-backend = "setuptools.build_meta"
 package = true
 
 [project.urls]
-Homepage = "https://github.com/simonw/llm-z-ai"
-Changelog = "https://github.com/simonw/llm-z-ai/releases"
-Issues = "https://github.com/simonw/llm-z-ai/issues"
-CI = "https://github.com/simonw/llm-z-ai/actions"
+Homepage = "https://github.com/simonw/llm-glm"
+Changelog = "https://github.com/simonw/llm-glm/releases"
+Issues = "https://github.com/simonw/llm-glm/issues"
+CI = "https://github.com/simonw/llm-glm/actions"
 
 [project.entry-points.llm]
-z_ai = "llm_z_ai"
+glm = "llm_glm"
 
 [dependency-groups]
 dev = ["pytest", "pytest-recording", "pytest-asyncio"]

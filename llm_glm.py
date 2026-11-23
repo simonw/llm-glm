@@ -39,7 +39,7 @@ def get_key():
 
 
 def cache_path():
-    return llm.user_dir() / "zai_models.json"
+    return llm.user_dir() / "glm_models.json"
 
 
 def fetch_models(key):
@@ -70,7 +70,7 @@ def fetch_models(key):
     return sorted(models.values(), key=lambda model: model["id"])
 
 
-def get_zai_models(key=None, skip_cache=False):
+def get_glm_models(key=None, skip_cache=False):
     """
     Return the list of models, using a copy cached for up to an hour.
 
@@ -244,7 +244,7 @@ class _SharedZai:
         model_name = model_definition["id"]
         efforts = reasoning_efforts(model_definition)
         super().__init__(
-            model_id="zai/{}".format(model_name),
+            model_id="zai-glm/{}".format(model_name),
             model_name=model_name,
             api_base=API_BASE,
             vision=supports_vision(model_definition),
@@ -278,7 +278,7 @@ class ZaiAsyncResponses(_SharedZai, AsyncResponses):
 @llm.hookimpl
 def register_models(register):
     # Without a key this is the cached list, or nothing if there is no cache
-    for model_definition in get_zai_models():
+    for model_definition in get_glm_models():
         register(
             ZaiResponses(model_definition),
             ZaiAsyncResponses(model_definition),
@@ -288,8 +288,8 @@ def register_models(register):
 @llm.hookimpl
 def register_commands(cli):
     @cli.group()
-    def zai():
-        "Commands relating to the llm-z-ai plugin"
+    def glm():
+        "Commands relating to the llm-glm plugin"
 
     def require_key(key):
         key = llm.get_key(key or "", "zai", "ZAI_API_KEY")
@@ -300,20 +300,20 @@ def register_commands(cli):
             )
         return key
 
-    @zai.command()
+    @glm.command()
     @click.option("--key", help="Z.ai API key")
     @click.option("json_", "--json", is_flag=True, help="Output as JSON")
     def models(key, json_):
         "List available Z.ai models"
         try:
-            definitions = get_zai_models(key=require_key(key))
+            definitions = get_glm_models(key=require_key(key))
         except (httpx2.HTTPError, KeyError, ValueError) as ex:
             raise click.ClickException("Could not fetch models: {}".format(ex))
         if json_:
             click.echo(json.dumps(definitions, indent=2))
             return
         for model in definitions:
-            click.echo("zai/{}".format(model["id"]))
+            click.echo("zai-glm/{}".format(model["id"]))
             details = model.get("details")
             if not details:
                 continue
@@ -332,7 +332,7 @@ def register_commands(cli):
                     "  Context window: {:,} tokens".format(details["context_window"])
                 )
 
-    @zai.command()
+    @glm.command()
     @click.option("--key", help="Z.ai API key")
     def refresh(key):
         "Refresh the cached list of Z.ai models"
@@ -344,13 +344,13 @@ def register_commands(cli):
             except ValueError:
                 pass
         try:
-            definitions = get_zai_models(key=require_key(key), skip_cache=True)
+            definitions = get_glm_models(key=require_key(key), skip_cache=True)
         except (httpx2.HTTPError, KeyError, ValueError) as ex:
             raise click.ClickException("Could not fetch models: {}".format(ex))
         after = {model["id"] for model in definitions}
         for model_id in sorted(after - before):
-            click.echo("Added: zai/{}".format(model_id))
+            click.echo("Added: zai-glm/{}".format(model_id))
         for model_id in sorted(before - after):
-            click.echo("Removed: zai/{}".format(model_id))
+            click.echo("Removed: zai-glm/{}".format(model_id))
         if after == before:
             click.echo("No changes, {} models".format(len(after)))

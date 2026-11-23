@@ -1,9 +1,9 @@
-# llm-z-ai
+# llm-glm
 
-[![PyPI](https://img.shields.io/pypi/v/llm-z-ai.svg)](https://pypi.org/project/llm-z-ai/)
-[![Changelog](https://img.shields.io/github/v/release/simonw/llm-z-ai?include_prereleases&label=changelog)](https://github.com/simonw/llm-z-ai/releases)
-[![Tests](https://github.com/simonw/llm-z-ai/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-z-ai/actions/workflows/test.yml)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-z-ai/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/llm-glm.svg)](https://pypi.org/project/llm-zai-glm/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/llm-glm?include_prereleases&label=changelog)](https://github.com/simonw/llm-zai-glm/releases)
+[![Tests](https://github.com/simonw/llm-zai-glm/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-zai-glm/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-zai-glm/blob/main/LICENSE)
 
 Access models via the Z.ai API
 
@@ -11,7 +11,7 @@ Access models via the Z.ai API
 
 Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
-llm install llm-z-ai
+llm install llm-glm
 ```
 ## Usage
 
@@ -22,13 +22,13 @@ llm keys set zai
 ```
 You can also set it using the `ZAI_API_KEY` environment variable.
 
-Run `llm models -q zai` to see the available models, then run a prompt against one of them:
+Run `llm models -q glm` to see the available models, then run a prompt against one of them:
 ```bash
-llm -m zai/glm-5.3 'Five great names for a pet pelican'
+llm -m zai-glm/glm-5.3 'Five great names for a pet pelican'
 ```
 Start a chat session with `llm chat`:
 ```bash
-llm chat -m zai/glm-5.3
+llm chat -m zai-glm/glm-5.3
 ```
 This plugin uses the Z.ai [OpenAI Responses compatible API](https://docs.z.ai/devpack/quick-start) at `https://api.z.ai/api/v1`.
 
@@ -42,30 +42,30 @@ llm keys set zai-api
 ```
 Then pass that name to `--key` to use it for a prompt:
 ```bash
-llm -m zai/glm-5.4 --key zai-api 'Five great names for a pet pelican'
+llm -m zai-glm/glm-5.4 --key zai-api 'Five great names for a pet pelican'
 ```
 The list of models is fetched using the `zai` key or `ZAI_API_KEY`. If you have not set either of those, fetch the list once using a key of your choice:
 ```bash
-llm zai refresh --key zai-api
+llm glm refresh --key zai-api
 ```
 
 ### Models
 
 The list of models is fetched from Z.ai and cached for an hour. To fetch the latest list straight away:
 ```bash
-llm zai refresh
+llm glm refresh
 ```
 The list can include models that your key does not have permission to use.
 
 To see that list of models:
 ```bash
-llm zai models
+llm glm models
 ```
 The Z.ai API includes details for some models about whether they accept images and which reasoning efforts they support. Models without this information are treated as supporting every feature, but will return errors if you attempt to use a feature that is not supported.
 
 Add `--json` for the full details as JSON:
 ```bash
-llm zai models --json
+llm glm models --json
 ```
 
 Both commands accept an optional `--key`.
@@ -76,9 +76,9 @@ Most of these models reason before they answer. That reasoning is displayed as i
 
 Use the `reasoning_effort` option to control how much reasoning a model does:
 ```bash
-llm -m zai/glm-5.3 'Why is the sky blue?' -o reasoning_effort low
+llm -m zai-glm/glm-5.3 'Why is the sky blue?' -o reasoning_effort low
 ```
-Different models accept different values. `glm-5.3` and `glm-5.3-flash` accept `low`, `high` and `max`. Older models such as `glm-5.2` also accept `none` or `minimal`, which turn reasoning off. `llm zai models` shows the supported values for the models that Z.ai describe.
+Different models accept different values. `glm-5.3` and `glm-5.3-flash` accept `low`, `high` and `max`. Older models such as `glm-5.2` also accept `none` or `minimal`, which turn reasoning off. `llm glm models` shows the supported values for the models that Z.ai describe.
 
 ### Options
 
@@ -92,8 +92,8 @@ Different models accept different values. `glm-5.3` and `glm-5.3-flash` accept `
 
 Some models, such as `glm-5.3-flash`, accept images as attachments:
 ```bash
-llm -m zai/glm-5.3-flash 'Describe this image' -a image.jpg
-llm -m zai/glm-5.3-flash 'Describe this image' \
+llm -m zai-glm/glm-5.3-flash 'Describe this image' -a image.jpg
+llm -m zai-glm/glm-5.3-flash 'Describe this image' \
   -a https://static.simonwillison.net/static/2024/pelicans.jpg
 ```
 
@@ -101,11 +101,11 @@ llm -m zai/glm-5.3-flash 'Describe this image' \
 
 These models support [tools](https://llm.datasette.io/en/stable/tools.html):
 ```bash
-llm -m zai/glm-5.3 'What time is it?' -T llm_time --td
+llm -m zai-glm/glm-5.3 'What time is it?' -T llm_time --td
 ```
 And [schemas](https://llm.datasette.io/en/stable/schemas.html):
 ```bash
-llm -m zai/glm-5.3 'Invent a dog' --schema 'name, age int'
+llm -m zai-glm/glm-5.3 'Invent a dog' --schema 'name, age int'
 ```
 Schemas are only available for models that support them: currently `glm-5.3`, `glm-5.3-flash` and `glm-5.4`.
 
@@ -113,7 +113,7 @@ Schemas are only available for models that support them: currently `glm-5.3`, `g
 
 To set up this plugin locally, first checkout the code. Then run the tests with `uv`:
 ```bash
-cd llm-z-ai
+cd llm-glm
 uv run pytest
 ```
 To run LLM with your in-development plugin:
